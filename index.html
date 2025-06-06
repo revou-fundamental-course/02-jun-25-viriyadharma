@@ -11,13 +11,15 @@
 <!-- Header with Logo and Navigation -->
 <header>
   <div class="logo">MyLogo</div>
-  <nav>
+  <nav class="nav-links">
     <a href="#home">Home</a>
     <a href="#profile">Our Profile</a>
-    <a href="#about">About my school</a>
+    <a href="#about">My school</a>
     <a href="#vision">Vision & Mission</a>
     <a href="#message">Message Us</a>
   </nav>
+    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button> 
+    <!-- Hamburger icon -->
 </header>
 
 <!-- Welcome Banner with dynamic name -->
@@ -25,19 +27,19 @@
   <!-- Slider images -->
   <div class="slider" id="slider">
     <div class="slide">
-        <img src="https://fastly.picsum.photos/id/299/5000/3288.jpg?hmac=vajPmKo1hPW0RLYeb2h14Ry9Mp5Gw0rs0yc78FmBmdM" alt="Image 1" />
+        <img src="/img/1.jpg" alt="Image 1" />
     </div>
     <div class="slide">
-        <img src="https://fastly.picsum.photos/id/315/2100/1500.jpg?hmac=-04N-t7k_WwNeI30ryvWT4KGzy7XVdsw41fNRDFizck" alt="Image 2" />
+        <img src="/img/2.jpg" alt="Image 2" />
     </div>
     <div class="slide">
-        <img src="https://fastly.picsum.photos/id/290/3456/2304.jpg?hmac=wQ0HAtXSS4YCelICbwu866D6jbzBLizY93vPTtyaUpQ" alt="Image 3" />
+        <img src="/img/3.jpg" alt="Image 3" />
     </div>
     <div class="slide">
-        <img src="https://fastly.picsum.photos/id/397/4475/2984.jpg?hmac=_PEWxhdxVnCU15wD6E-blJDbpMVH17QQVV0JYMZnkjc" alt="Image 4" />
+        <img src="/img/4.jpg" alt="Image 4" />
     </div>
     <div class="slide">
-        <img src="https://fastly.picsum.photos/id/402/1200/715.jpg?hmac=8MggDIRraVWL2s5OVWAVztJELhlv-MyVwuE4nFolsFU" alt="Image 4" />
+        <img src="/img/5.jpg" alt="Image 4" />
     </div>
   </div>
   <!-- Overlay text inside banner -->
@@ -47,6 +49,8 @@
   </div>    
 </section>
 
+<br>
+
 <!-- Content Sections -->
 <section id="profile" class="content-section">
   <h2>Our Profile</h2>
@@ -54,7 +58,7 @@
 </section>
 
 <section id="about" class="content-section">
-  <h2>About my school</h2>
+  <h2>My school</h2>
   <p>This section contains information about my school.</p>
 </section>
 
@@ -62,6 +66,42 @@
   <h2>Vision & Mission</h2>
   <p>Our vision and mission are...</p>
 </section>
+
+<div class="container">
+  <!-- Left side form -->
+  <div id="message" class="form-section">
+    <h2>Message US</h2>
+    <form id="dataForm">
+      <!-- Nama -->
+      <label for="nama">Name:</label><br>
+      <input type="text" id="nama" name="nama" required><br>
+      
+      <!-- Tanggal -->
+      <label for="tanggal">Date:</label><br>
+      <input type="date" id="tanggal" name="tanggal" required><br>
+      
+      <!-- Jenis Kelamin -->
+      <label>Gendre:</label><br>
+      <input type="radio" id="male" name="jeniskelamin" value="Male" required>
+      <label for="male">Laki-laki</label><br>
+      <input type="radio" id="female" name="jeniskelamin" value="Female">
+      <label for="female">Perempuan</label><br>
+      
+      <!-- Message -->
+      <label for="pesan">Pesan:</label><br>
+      <textarea id="pesan" name="pesan" rows="4" cols="30" placeholder="Tulis pesan di sini..."></textarea><br>
+      
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  <!-- Right side result display -->
+  <div class="result-section" id="resultBox">
+    <h2 id="hasilTitle" style="display: none;">Hasil</h2>
+    <div id="resultContent"></div>
+  </div>
+</div>
 
 <!-- Footer -->
 <footer>
