@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   background-color: rgba(34, 34, 34, 0.75);
   position: sticky;
   top: 0;
@@ -26,20 +26,35 @@ header {
   flex-wrap: wrap;
 }
 
-/* Logo style */
+/* Style the logo container */
 .logo {
-  width: 10vw;
+  width: 10vw; /* or your preferred size */
+  height: 10vw;
   max-width: 50px;
-  height: auto;
-  border: 3px solid black;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
+  max-height: 50px;
+  border: 1px solid black;
+  border-radius: 50%; /* makes it circular */
+  overflow: hidden; /* clips overflowing content */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  cursor: default;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Make the link occupy the entire circle */
+.logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* remove underline if any */
+}
+
+/* Style the image to cover the circle */
+.logo a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures the image covers the area without distortion */
+  display: block;
 }
 
 /* Navigation container */
@@ -125,6 +140,91 @@ nav a:hover {
 #navigation {
   margin-top: 20px;
   text-align: center;
+}
+
+p {
+  text-align: justify;
+
+}
+
+/* Style for the whole table */
+.program-studi-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* Table header styles */
+.program-studi-table thead {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Default header and cell styles */
+.program-studi-table th,
+.program-studi-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left; /* default alignment for other columns */
+}
+
+/* Center-align "Jenjang" and "Gelar" headers */
+.program-studi-table th:nth-child(2),
+.program-studi-table th:nth-child(3) {
+    text-align: center;
+}
+
+/* Center-align "Jenjang" and "Gelar" data cells */
+.program-studi-table td:nth-child(2),
+.program-studi-table td:nth-child(3) {
+    text-align: center;
+}
+
+li,ol p {
+ text-align: justify;
+ margin-left: 20px;
+}
+
+.cover {
+  height: auto; /* Full viewport height */
+  width: 100%;
+  /* Semi-transparent yellow background using RGBA */
+  background-color: rgba(255, 255, 0, 0.5); /* yellow with 50% opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black; /* text color for visibility */
+  flex-direction: column;
+}
+
+/* Container holding all circle items */
+.circle-container {
+  display: flex;
+  gap: 30px; /* space between each circle item */
+  margin-top: 20px;
+  justify-content: center; /* optional, to center the group */
+}
+
+/* Each circle and its text */
+.circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for the images to be circles */
+.circle {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Style for the text below each circle */
+.circle-item p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #000;
 }
 
 /* Content sections styling */
