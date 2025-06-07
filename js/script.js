@@ -78,6 +78,26 @@ menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('nav-active');
 });
 
+  // Set max date to today on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const day = now.getDate().toString().padStart(2, '0');
+
+    const todayStr = `${year}-${month}-${day}`;
+
+    const tanggalInput = document.getElementById('tanggal');
+    tanggalInput.setAttribute('max', todayStr);
+    tanggalInput.value = todayStr;
+
+    // Store globally for validation
+    window.todayStr = todayStr;
+
+    // Also, initialize current date-time string if needed
+    // (You can define currentDateTimeString here if you want)
+  });
+
 // Attach event listener to the form
 document.getElementById('dataForm').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -117,6 +137,12 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
     return;
   }
   
+  // Date validation
+  if (!tanggal > window.todayStr) {
+    alert('Tanggal tidak boleh melebihi hari ini.');
+    return;
+  }
+
   // Validate that gender is selected
   if (!jeniskelamin) {
     alert('Silakan pilih Jenis Kelamin.');
@@ -125,26 +151,6 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
 
   // Show the "Hasil" heading
   document.getElementById('hasilTitle').style.display = 'block';
-
-const now = new Date();
-
-const year = now.getFullYear();
-const month = (now.getMonth() + 1).toString().padStart(2, '0');
-const day = now.getDate().toString().padStart(2, '0');
-const currentDate = `${year}-${month}-${day}`;
-
-const hours = now.getHours().toString().padStart(2, '0');
-const minutes = now.getMinutes().toString().padStart(2, '0');
-const seconds = now.getSeconds().toString().padStart(2, '0');
-const currentTime = `${hours}:${minutes}:${seconds}`;
-
-const timezoneOffsetMinutes = now.getTimezoneOffset(); // in minutes
-const offsetHours = Math.floor(Math.abs(timezoneOffsetMinutes) / 60);
-const offsetMinutes = Math.abs(timezoneOffsetMinutes) % 60;
-const sign = timezoneOffsetMinutes <= 0 ? '+' : '-';
-const gmtOffset = `GMT${sign}${offsetHours.toString().padStart(2,'0')}:${offsetMinutes.toString().padStart(2,'0')}`;
-
-const currentDateTimeString = `${currentDate} (${gmtOffset}) ${currentTime}`;
 
   // Display the result in the right box
   const resultDiv = document.getElementById('resultContent');
