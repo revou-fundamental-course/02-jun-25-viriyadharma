@@ -8,6 +8,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
+        // Optional: attempt to play the audio as soon as the page loads
+        window.onload = function() {
+            const audio = document.getElementById('music');
+            // Try to play the audio; handle promise for modern browsers
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    // Autoplay started!
+                }).catch(error => {
+                    // Autoplay was prevented.
+                    console.log("Autoplay prevented:", error);
+                });
+            }
+        };
+
+  document.getElementById('playBtn').addEventListener('click', () => {
+    const iframe = document.getElementById('myVideo');
+    iframe.style.display = 'block';
+    // Optionally, set the src with autoplay and mute if not already set
+    iframe.src = 'https://www.youtube.com/embed/AOOwKKHSyns?autoplay=1&mute=1';
+  });
+
 document.addEventListener('DOMContentLoaded', () => {
   const slider = document.getElementById('slider');
   
@@ -62,11 +84,13 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
 
   const namaInput = document.getElementById('nama');
   const tanggalInput = document.getElementById('tanggal');
+  const emailInput = document.getElementById('email');
   const pesanInput = document.getElementById('pesan');
   const jenkelRadios = document.querySelectorAll('input[name="jeniskelamin"]');
 
   const nama = namaInput.value.trim();
   const tanggal = tanggalInput.value;
+  const email = emailInput.value.trim();
   const pesan = pesanInput.value.trim();
 
   // Get selected gender
@@ -86,6 +110,13 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
     return;
   }
 
+  // Validate email
+  if (!email.includes('@') || !email.includes('.com')) {
+    errorDiv.textContent = 'Please enter a valid email containing "@" and ".com".';
+    resultDiv.innerHTML = '';
+    return;
+  }
+  
   // Validate that gender is selected
   if (!jeniskelamin) {
     alert('Silakan pilih Jenis Kelamin.');
@@ -95,13 +126,35 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
   // Show the "Hasil" heading
   document.getElementById('hasilTitle').style.display = 'block';
 
+const now = new Date();
+
+const year = now.getFullYear();
+const month = (now.getMonth() + 1).toString().padStart(2, '0');
+const day = now.getDate().toString().padStart(2, '0');
+const currentDate = `${year}-${month}-${day}`;
+
+const hours = now.getHours().toString().padStart(2, '0');
+const minutes = now.getMinutes().toString().padStart(2, '0');
+const seconds = now.getSeconds().toString().padStart(2, '0');
+const currentTime = `${hours}:${minutes}:${seconds}`;
+
+const timezoneOffsetMinutes = now.getTimezoneOffset(); // in minutes
+const offsetHours = Math.floor(Math.abs(timezoneOffsetMinutes) / 60);
+const offsetMinutes = Math.abs(timezoneOffsetMinutes) % 60;
+const sign = timezoneOffsetMinutes <= 0 ? '+' : '-';
+const gmtOffset = `GMT${sign}${offsetHours.toString().padStart(2,'0')}:${offsetMinutes.toString().padStart(2,'0')}`;
+
+const currentDateTimeString = `${currentDate} (${gmtOffset}) ${currentTime}`;
+
   // Display the result in the right box
   const resultDiv = document.getElementById('resultContent');
   resultDiv.innerHTML = `
     <p><strong>Name:</strong> ${nama}</p>
     <p><strong>Date:</strong> ${tanggal}</p>
+    <p><strong>Email:</strong> ${email}</p>
     <p><strong>Gender:</strong> ${jeniskelamin}</p>
     <p><strong>Message:</strong> ${pesan}</p>
+    <p><strong>Current Date & Time:</strong><br> ${currentDateTimeString}</p>
   `;
 
   // Reset the form fields

@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>My Portfolio</title>
 <link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+
 </head>
 <body>
 
@@ -25,6 +27,11 @@
     <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button> 
     <!-- Hamburger icon -->
 </header>
+
+    <audio id="music" autoplay loop>
+        <source src="https://www.upbatam.ac.id/upload/other/Hymne_Putera_Batam.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
 
 <!-- Welcome Banner with dynamic name -->
 <section id="home" class="banner">
@@ -49,7 +56,7 @@
   <!-- Overlay text inside banner -->
   <div class="overlay-text">
     <h1>Hello, <span id="name"></span>!</h1>
-    <p>Welcome to my portfolio website.</p>
+    <p>Welcome to my school website.</p>
   </div>    
 </section>
 
@@ -135,8 +142,14 @@
   <p>Universitas Putera Batam is more than just a place of learning for me; it feels like a second home. Located in the vibrant city of Batam, this university inspires students to dream big and work hard to achieve their goals. The friendly atmosphere and caring lecturers make every student feel valued and motivated.</p><br>
   <p>What I love most about Universitas Putera Batam is its focus on practical learning. It’s not just about textbooks, but about gaining real-world skills and experiences. The campus is lively, with opportunities to join clubs, seminars, and community projects that help us grow both personally and professionally.</p><br>
   <p>The university’s spirit of togetherness and passion for education make it special. Here, I’ve found friends, mentors, and a place where I can truly develop my talents. I believe that with the support and inspiration I find at Universitas Putera Batam, I can turn my dreams into reality and make a positive impact on society.</p><br>
-
-This university is not just my school; it’s my future.
+  <p>This university is not just my school, it’s my future.</p><br>
+    <!-- Embed YouTube video -->
+    <button id="playBtn">Play Video</button>
+    <iframe id="myVideo" width="560" height="315" src="https://www.youtube.com/embed/AOOwKKHSyns" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen style="display:none;">
+    </iframe>
 </section>
 
 <section id="vision" class="content-section">
@@ -208,6 +221,10 @@ This university is not just my school; it’s my future.
       <label for="tanggal">Date:</label><br>
       <input type="date" id="tanggal" name="tanggal" required><br>
       
+      <!-- Email -->
+      <label for="email">Enter your email:</label><br>
+      <input type="email" id="email" name="email" required><br>
+
       <!-- Jenis Kelamin -->
       <label>Gendre:</label><br>
       <input type="radio" id="male" name="jeniskelamin" value="Male" required>
