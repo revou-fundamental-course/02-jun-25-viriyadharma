@@ -1,258 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Character encoding for the document -->
 <meta charset="UTF-8" />
+
+<!-- Ensures proper rendering and touch zooming on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Title of the webpage displayed in the browser tab -->
 <title>My Portfolio</title>
+
+<!-- Link to the external CSS stylesheet for styling the page -->
 <link rel="stylesheet" href="css/style.css" />
+
+<!-- Link to the favicon (icon shown in the browser tab) -->
 <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
 
 </head>
+
+<!-- Body content goes here -->
 <body>
 
 <!-- Header with Logo and Navigation -->
 <header>
+  <!-- Logo container -->
     <div class="logo">
+      <!-- Link that navigates to the section with id="detail" when clicked -->
         <a href="#detail">
-    <img src="img/UpB.png" alt="Logo"/>
+          <!-- Logo image -->      
+          <img src="img/UpB.png" alt="Logo"/>
         </a>
     </div>
+  <!-- Navigation links -->
   <nav class="nav-links">
+    <!-- Link to the 'Home' section -->
     <a href="#home">Home</a>
+    <!-- Link to the 'Our Profile' section -->
     <a href="#profile">Our Profile</a>
+    <!-- Link to the 'My school' section -->
     <a href="#about">My school</a>
+    <!-- Link to the 'Vision & Mission' section -->    
     <a href="#vision">Vision & Mission</a>
+    <!-- Link to the 'Message Us' section -->
     <a href="#message">Message Us</a>
   </nav>
-    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button> 
-    <!-- Hamburger icon -->
+    <!-- Hamburger menu button for responsive navigation on smaller screens -->
+  <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button> 
+    <!-- Hamburger menu button for responsive navigation on smaller screens -->
 </header>
 
-    <audio id="music" autoplay loop>
-        <source src="https://www.upbatam.ac.id/upload/other/Hymne_Putera_Batam.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-    </audio>
+<!-- Audio player element with id 'music' that automatically plays and loops -->
+<audio id="music" autoplay loop>
+  <!-- Source file for the audio playback -->
+  <source src="https://www.upbatam.ac.id/upload/other/Hymne_Putera_Batam.mp3" type="audio/mpeg" />
+  <!-- Fallback text displayed if the browser does not support the audio element -->
+    Your browser does not support the audio element.
+</audio>
 
-<!-- Welcome Banner with dynamic name -->
-<section id="home" class="banner">
-  <!-- Slider images -->
-  <div class="slider" id="slider">
-    <div class="slide">
-        <img src="/img/1.jpg" alt="Image 1" />
+<!-- Main banner area -->
+<main>
+  <!-- Welcome banner section with id 'home' and class 'banner' -->
+  <section id="home" class="banner">
+    <!-- Slider container holding multiple slide images -->
+    <div class="slider" id="slider">
+      <!-- Individual slide with image 1 -->
+      <div class="slide">
+          <img src="/img/1.jpg" alt="Image 1" />
+      </div>
+      <!-- Individual slide with image 2 -->
+      <div class="slide">
+          <img src="/img/2.jpg" alt="Image 2" />
+      </div>
+      <!-- Individual slide with image 3 -->
+      <div class="slide">
+          <img src="/img/3.jpg" alt="Image 3" />
+      </div>
+      <!-- Individual slide with image 4 -->
+      <div class="slide">
+          <img src="/img/4.jpg" alt="Image 4" />
+      </div>
+      <!-- Individual slide with image 5 -->
+      <div class="slide">
+          <img src="/img/5.jpg" alt="Image 5" />
+      </div>
     </div>
-    <div class="slide">
-        <img src="/img/2.jpg" alt="Image 2" />
-    </div>
-    <div class="slide">
-        <img src="/img/3.jpg" alt="Image 3" />
-    </div>
-    <div class="slide">
-        <img src="/img/4.jpg" alt="Image 4" />
-    </div>
-    <div class="slide">
-        <img src="/img/5.jpg" alt="Image 4" />
-    </div>
-  </div>
-  <!-- Overlay text inside banner -->
-  <div class="overlay-text">
-    <h1>Hello, <span id="name"></span>!</h1>
-    <p>Welcome to my school website.</p>
-  </div>    
-</section>
+    <!-- Overlay text displayed over the banner images -->
+    <div class="overlay-text">
+      <!-- Greeting with dynamic name inserted via JavaScript -->
+      <h1>Hello, <span id="name"></span>!</h1>
+      <!-- Welcome message -->
+      <p>Welcome to my school website.</p>
+    </div>    
+  </section>
+</main>
 
+<!-- Spacing -->
 <br>
 
-<!-- Content Sections -->
-<section id="profile" class="content-section">
-  <h2>Our Profile</h2>
-    <p>Universitas Putera Batam berdiri pada tahun 2008 yang pada awal nya merupakan sebuah Lembaga Pendidikan Komputer dan Bahasa Inggris yang telah berdiri pada tahun 1992 dengan nama Lembaga Pendidikan Putera Batam, dan berkat landasan yang kuat, visi yang jelas serta dedikasi yang berkesinambungan, dan juga dukungan dari masyarakat Kota Batam maka lembaga pendidikan ini terus berkembang menjadi Akademi Bahasa Asing (ABA) Putera Batam pada tahun 2002.</p>
+<!-- Main content area containing all sections -->
+<main> 
+  <!-- Profile section with id 'profile' and class 'content-section' -->
+  <section id="profile" class="content-section">
+    <!-- Section heading for 'Our Profile' -->
+    <h2>Our Profile</h2>
+      <!-- Paragraph describing the history and development of Universitas Putera Batam -->
+      <p>Universitas Putera Batam berdiri pada tahun 2008 yang pada awal nya merupakan sebuah Lembaga Pendidikan Komputer dan Bahasa Inggris yang telah berdiri pada tahun 1992 dengan nama Lembaga Pendidikan Putera Batam, dan berkat landasan yang kuat, visi yang jelas serta dedikasi yang berkesinambungan, dan juga dukungan dari masyarakat Kota Batam maka lembaga pendidikan ini terus berkembang menjadi Akademi Bahasa Asing (ABA) Putera Batam pada tahun 2002.</p>
+
+    <!-- Spacing -->
     <br>
-    <p>Dan saat ini Universitas Putera Batam Memiliki 2 Program Pendidikan yaitu Program Sarjana (S1) yang terdiri dari 2 Fakultas dan 9 Program Studi dan Program Pasca Sarjana (S2) dengan Program Studi Manajemen. </p>
-<br>
-    <h2>Program Studi</h2>
-    <!-- Insert the table here -->
-    <table class="program-studi-table">
-        <thead>
-            <tr>
-                <th>Program Studi</th>
-                <th>Jenjang</th>
-                <th>Gelar</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Ilmu Hukum</td>
-                <td>S1</td>
-                <td>S.H.</td>
-            </tr>
-            <tr>
-                <td>Manajemen</td>
-                <td>S1</td>
-                <td>S.M.</td>
-            </tr>
-            <tr>
-                <td>Magister Manajemen</td>
-                <td>S2</td>
-                <td>M.M.</td>
-            </tr>
-            <tr>
-                <td>Akuntansi</td>
-                <td>S1</td>
-                <td>S.Ak.</td>
-            </tr>
-            <tr>
-                <td>Ilmu Komunikasi</td>
-                <td>S1</td>
-                <td>S.I.Kom.</td>
-            </tr>
-            <tr>
-                <td>Sastra Inggris</td>
-                <td>S1</td>
-                <td>S.S.</td>
-            </tr>
-            <tr>
-                <td>Ilmu Administrasi Negara</td>
-                <td>S1</td>
-                <td>S.A.P.</td>
-            </tr>
-            <tr>
-                <td>Sistem Informasi</td>
-                <td>S1</td>
-                <td>S.Kom.</td>
-            </tr>
-            <tr>
-                <td>Teknik Informatika</td>
-                <td>S1</td>
-                <td>S.Kom.</td>
-            </tr>
-            <tr>
-                <td>Teknik Industri</td>
-                <td>S1</td>
-                <td>S.T.</td>
-            </tr>
-        </tbody>
-    </table><br>
-    <p>Sesuai dengan SK Mendiknas RI No. 161/D/O/2008. Dengan diterbitkannya SK Mendiknas tentang penyelenggaraan program pendidikan tinggi di atas, maka Universitas Putera Batam tidak perlu melaksanakan Ujian Negara dan diperlakukan sama dengan Perguruan Tinggi Negeri.</p>
-</section>
+    <!-- Spacing -->
+       
+      <!-- Additional paragraph about current academic programs --> 
+      <p>Dan saat ini Universitas Putera Batam Memiliki 2 Program Pendidikan yaitu Program Sarjana (S1) yang terdiri dari 2 Fakultas dan 9 Program Studi dan Program Pasca Sarjana (S2) dengan Program Studi Manajemen. </p>
 
+    <!-- Spacing -->
+    <br>
+    <!-- Spacing -->
+   
+      <!-- Section heading for 'Program Studi' (Study Programs) -->
+      <h2>Program Studi</h2>
+      <!-- Table listing the study programs offered -->
+      <table class="program-studi-table">
+          <!-- Table header row -->
+          <thead>
+              <tr>
+                  <th>Program Studi</th>
+                  <th>Jenjang</th>
+                  <th>Gelar</th>
+              </tr>
+          </thead>
+          <!-- Table body with program details -->
+          <tbody>
+              <tr>
+                  <td>Ilmu Hukum</td>
+                  <td>S1</td>
+                  <td>S.H.</td>
+              </tr>
+              <tr>
+                  <td>Manajemen</td>
+                  <td>S1</td>
+                  <td>S.M.</td>
+              </tr>
+              <tr>
+                  <td>Magister Manajemen</td>
+                  <td>S2</td>
+                  <td>M.M.</td>
+              </tr>
+              <tr>
+                  <td>Akuntansi</td>
+                  <td>S1</td>
+                  <td>S.Ak.</td>
+              </tr>
+              <tr>
+                  <td>Ilmu Komunikasi</td>
+                  <td>S1</td>
+                  <td>S.I.Kom.</td>
+              </tr>
+              <tr>
+                  <td>Sastra Inggris</td>
+                  <td>S1</td>
+                  <td>S.S.</td>
+              </tr>
+              <tr>
+                  <td>Ilmu Administrasi Negara</td>
+                  <td>S1</td>
+                  <td>S.A.P.</td>
+              </tr>
+              <tr>
+                  <td>Sistem Informasi</td>
+                  <td>S1</td>
+                  <td>S.Kom.</td>
+              </tr>
+              <tr>
+                  <td>Teknik Informatika</td>
+                  <td>S1</td>
+                  <td>S.Kom.</td>
+              </tr>
+              <tr>
+                  <td>Teknik Industri</td>
+                  <td>S1</td>
+                  <td>S.T.</td>
+              </tr>
+          </tbody>
+      </table><br>
+      <!-- Paragraph about accreditation and national exam exemption -->
+      <p>Sesuai dengan SK Mendiknas RI No. 161/D/O/2008. Dengan diterbitkannya SK Mendiknas tentang penyelenggaraan program pendidikan tinggi di atas, maka Universitas Putera Batam tidak perlu melaksanakan Ujian Negara dan diperlakukan sama dengan Perguruan Tinggi Negeri.</p>
+  </section>
+</main>
+
+<!-- 'About' section with id 'about' and class 'content-section' -->
 <section id="about" class="content-section">
+  <!-- Main heading for the section -->
   <h2>My school</h2>
+  <!-- Subheading with the university name -->
   <h2>Universitas Putera Batam</h2><br>
+  <!-- Brief description of the university's reputation -->
   <p>Universitas terkemuka berbasis teknologi informasi dan komunikasi yang menghasilkan sumber daya manusia yang berkompeten di bidangnya.</p><br>
+  <!-- Personal reflection paragraph about the university -->
   <p>Universitas Putera Batam is more than just a place of learning for me; it feels like a second home. Located in the vibrant city of Batam, this university inspires students to dream big and work hard to achieve their goals. The friendly atmosphere and caring lecturers make every student feel valued and motivated.</p><br>
+  <!-- Emphasis on practical learning and campus life -->
   <p>What I love most about Universitas Putera Batam is its focus on practical learning. It’s not just about textbooks, but about gaining real-world skills and experiences. The campus is lively, with opportunities to join clubs, seminars, and community projects that help us grow both personally and professionally.</p><br>
+  <!-- Highlighting the university's community spirit and personal development -->
   <p>The university’s spirit of togetherness and passion for education make it special. Here, I’ve found friends, mentors, and a place where I can truly develop my talents. I believe that with the support and inspiration I find at Universitas Putera Batam, I can turn my dreams into reality and make a positive impact on society.</p><br>
+  <!-- Concluding personal statement -->
   <p>This university is not just my school, it’s my future.</p><br>
-    <!-- Embed YouTube video -->
+    <!-- Button to trigger video playback -->
     <button id="playBtn">Play Video</button>
-    <iframe id="myVideo" width="560" height="315" src="https://www.youtube.com/embed/AOOwKKHSyns" 
+    <!-- Embedded YouTube video, initially hidden -->
+    <iframe id="myVideo" width="auto" height="auto" src="https://www.youtube.com/embed/AOOwKKHSyns" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen style="display:none;">
+    <!-- ID for JavaScript control -->
+    <!-- Width of the video -->
+    <!-- Height of the video -->
+    <!-- scr - Video URL -->
+    <!-- Title - Description for accessibility -->
+    <!-- No border around the video -->
+    <!-- Permissions for features like autoplay -->
+    <!-- Allow fullscreen mode -->
+     <!-- Hide the video initially -->
     </iframe>
 </section>
 
+<!-- Section containing the vision, mission, goals, and development strategies -->
 <section id="vision" class="content-section">
+  <!-- Main heading for the section -->
   <h2>Vision & Mission</h2>
+  <!-- Subheading for Vision statement -->
   <h2>Visi</h2>
+  <!-- Vision statement describing the university's future goal -->
   <p>Menjadi salah satu Universitas Swasta terkemuka di bidang Technopreneurship dengan nilai kemandirian dan profesional di tingkat nasional pada tahun 2028.</p><br>
 
+  <!-- Subheading for Mission statements -->
   <h2>Misi</h2>
+    <!-- Ordered list of the university's mission objectives -->
     <ol>
-    <li>Menyelenggarakan pendidikan bermutu tinggi.</li>
-    <li>Menyelenggarakan penelitian sesuai dengan kepentingan masyarakat dan bangsa.</li>
-    <li>Menerapkan ilmu pengetahuan dan teknologi guna memajukan kesejahteraan umum dan mencerdaskan kehidupan bangsa.</li>
-    <li>Menjalin kerja sama dengan para stakeholders dalam rangka peningkatan mutuperguruan tinggi.</li>
-    <li>Menempatkan prinsip-prinsip TIK sebagai dasar pengelolaan dan pemanfaatan sumber daya yang profesional dengan penggunaan sistem informasi dan data yang efektif.</li>
+      <li>Menyelenggarakan pendidikan bermutu tinggi.</li>
+      <li>Menyelenggarakan penelitian sesuai dengan kepentingan masyarakat dan bangsa.</li>
+      <li>Menerapkan ilmu pengetahuan dan teknologi guna memajukan kesejahteraan umum dan mencerdaskan kehidupan bangsa.</li>
+      <li>Menjalin kerja sama dengan para stakeholders dalam rangka peningkatan mutuperguruan tinggi.</li>
+      <li>Menempatkan prinsip-prinsip TIK sebagai dasar pengelolaan dan pemanfaatan sumber daya yang profesional dengan penggunaan sistem informasi dan data yang efektif.</li>
     </ol><br>
 
+  <!-- Subheading for Goals/Objectives -->
   <h2>Tujuan</h2>
+    <!-- Ordered list of the university's goals -->
     <ol>
-    <li>Menghasilkan lulusan yang berdaya saing global dengan pola piker kepemimpinan yang profesional.</li>
-    <li>Meningkatkan kapasitas ilmu pengetahuan, teknologi, sosial dan humaniora guna untuk mendorong kemajuan bangsa dengan menanam kesadaran bahwa setiap orang mempunyai kemampuan untuk bermanfaat.</li>
-    <li>Memberdayakan masyarakat melalui pengembangan konsep pemecahan masalah dengan menggunakan metode ilmiah dan perbaikan diri yang terus menerus.</li>
-    <li>Meningkatkan kualitas pendidikan, penelitian dan pengabdian kepada masyarakat dengan mengkoordinasi berbagai sumber daya internal dan eksternal, dari instansi pemerintah maupun swasta yang ada di dalam dan luar negeri.</li>
-    <li>Meningkatkan kualitas dan kinerja tridarma perguruan tinggi dengan pemanfaatan TIK yang setinggi-tingginya.</li>
+      <li>Menghasilkan lulusan yang berdaya saing global dengan pola piker kepemimpinan yang profesional.</li>
+      <li>Meningkatkan kapasitas ilmu pengetahuan, teknologi, sosial dan humaniora guna untuk mendorong kemajuan bangsa dengan menanam kesadaran bahwa setiap orang mempunyai kemampuan untuk bermanfaat.</li>
+      <li>Memberdayakan masyarakat melalui pengembangan konsep pemecahan masalah dengan menggunakan metode ilmiah dan perbaikan diri yang terus menerus.</li>
+      <li>Meningkatkan kualitas pendidikan, penelitian dan pengabdian kepada masyarakat dengan mengkoordinasi berbagai sumber daya internal dan eksternal, dari instansi pemerintah maupun swasta yang ada di dalam dan luar negeri.</li>
+      <li>Meningkatkan kualitas dan kinerja tridarma perguruan tinggi dengan pemanfaatan TIK yang setinggi-tingginya.</li>
     </ol><br>
 
+  <!-- Subheading for Development Strategies -->
   <h2>Strategi Pengembangan</h2>
+    <!-- Ordered list of strategies to support development -->
     <ol>
-    <li>Pengembangan mutu sumber daya manusia dalam pengelolaan kelembagaan dan pelaksanaan Tridharma Perguruan Tinggi.</li>
-    <li>Penciptaan atmosfir yang kondusif bagi penerapan good governance dalam penyelenggaraan program dan administrasi pembangunan.</li>
-    <li>Peningkatan jaringan kerjasama dan partisipasi masyarakat dalam pengembangan Universitas Putera Batam.</li>
+      <li>Pengembangan mutu sumber daya manusia dalam pengelolaan kelembagaan dan pelaksanaan Tridharma Perguruan Tinggi.</li>
+      <li>Penciptaan atmosfir yang kondusif bagi penerapan good governance dalam penyelenggaraan program dan administrasi pembangunan.</li>
+      <li>Peningkatan jaringan kerjasama dan partisipasi masyarakat dalam pengembangan Universitas Putera Batam.</li>
     </ol>
 
 </section>
 
+<!-- Section for additional learning or contact links -->
 <section id="detail" class="cover"><br>
+  <!-- Main heading for the section -->
   <h1>Learn More</h1>
-  <!-- Lingkaran -->
+    <!-- Container for circular icons (social media links) -->
     <div class="circle-container">
-        <div class="circle-item">
-            <a href="https://www.instagram.com/univputerabatam.official/">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Image 1" class="circle">
+      <!-- First circle item: Instagram link -->  
+      <div class="circle-item">
+        <a href="https://www.instagram.com/univputerabatam.official/">
+          <!-- Instagram logo image -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Image 1" class="circle">
         </a>
-        
-        </div>
-        <div class="circle-item">
-            <a href="https://www.linkedin.com/school/universitas-putera-batam">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="Image 2" class="circle">
+      </div>
+      
+      <!-- Second circle item: LinkedIn link -->
+      <div class="circle-item">
+        <a href="https://www.linkedin.com/school/universitas-putera-batam">
+          <!-- LinkedIn logo image -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="Image 2" class="circle">
         </a>
-        </div>
-        <div class="circle-item">
-            <a href="https://api.whatsapp.com/send/?phone=6285775710743">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Image 3" class="circle">
-        </a><br>
+      </div>
+
+      <!-- Third circle item: WhatsApp contact -->
+      <div class="circle-item">
+        <a href="https://api.whatsapp.com/send/?phone=6285775710743">
+          <!-- WhatsApp logo image -->
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Image 3" class="circle">
+      </a><br>
 
         </div>
     </div>
 </section><br>
 
 <div class="container">
-  <!-- Left side form -->
+  <!-- Left side section containing the message/contact form -->
   <div id="message" class="form-section">
+    <!-- Heading for the contact form -->
     <h2>Message Us</h2>
+    <!-- The form element for user input -->
     <form id="dataForm">
-      <!-- Nama -->
+
+      <!-- Name input field -->
       <label for="nama">Name:</label><br>
       <input type="text" id="nama" name="nama" required><br>
       
-      <!-- Tanggal -->
+      <!-- Date input field -->
       <label for="tanggal">Date:</label><br>
       <input type="date" id="tanggal" name="tanggal" required><br>
       
-      <!-- Email -->
+      <!-- Email input field -->
       <label for="email">Enter your email:</label><br>
       <input type="email" id="email" name="email" required><br>
 
-      <!-- Jenis Kelamin -->
+      <!-- Jenis Kelamin (Gender) selection -->
       <label>Gendre:</label><br>
+      <!-- Radio button for Male gender option -->
       <input type="radio" id="male" name="jeniskelamin" value="Male" required>
       <label for="male">Laki-laki</label><br>
+      <!-- Radio button for Female gender option -->
       <input type="radio" id="female" name="jeniskelamin" value="Female">
       <label for="female">Perempuan</label><br>
       
-      <!-- Message -->
+      <!-- Message textarea for user to write a message -->
       <label for="pesan">Pesan:</label><br>
+      <!-- Textarea input with placeholder text -->
       <textarea id="pesan" name="pesan" rows="4" cols="30" placeholder="Tulis pesan di sini..."></textarea><br>
       
-      <!-- Submit Button -->
+      <!-- Submit Button to send the form data -->
       <button type="submit">Submit</button>
-    </form>
-  </div>
+    </form>  <!-- Closing the form element -->
+  </div> <!-- Closing the left side form section -->
   
-  <!-- Right side result display -->
+  <!-- Right side section for displaying results or messages after form submission -->
   <div class="result-section" id="resultBox">
+    <!-- Title for the result section, initially hidden with display: none -->
     <h2 id="hasilTitle" style="display: none;">Hasil</h2>
+    <!-- Container where the result or output will be displayed -->
     <div id="resultContent"></div>
   </div>
-</div>
+</div> <!-- Closing the main container -->
 
 <!-- Footer -->
 <footer>
+  <!-- Copyright information -->
   <p>&copy; 2025 Create by Viriyadharma Gopama</p>
 </footer>
 
+<!-- Linking external JavaScript file for additional functionality -->
 <script src="js/script.js"></script>
-</body>
-</html>
+</body> <!-- Closing the body tag -->
+
+</html> <!-- Closing the html document -->
