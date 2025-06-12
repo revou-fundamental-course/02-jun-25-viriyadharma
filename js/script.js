@@ -8,20 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-        // Optional: attempt to play the audio as soon as the page loads
-        window.onload = function() {
-            const audio = document.getElementById('music');
-            // Try to play the audio; handle promise for modern browsers
-            const playPromise = audio.play();
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    // Autoplay started!
-                }).catch(error => {
-                    // Autoplay was prevented.
-                    console.log("Autoplay prevented:", error);
-                });
-            }
-        };
+window.onload = function() {
+    const audio = document.getElementById('music');
+
+    // Create a small delay before showing the unmute button
+    document.getElementById('unmuteBtn').style.display = 'block';
+
+    document.getElementById('unmuteBtn').addEventListener('click', () => {
+        audio.muted = false;
+        audio.play().then(() => {
+            console.log("Audio unmuted and playing");
+        }).catch(error => {
+            console.log("Error playing audio:", error);
+        });
+        document.getElementById('unmuteBtn').style.display = 'none';
+    });
+};
 
   document.getElementById('playBtn').addEventListener('click', () => {
     const iframe = document.getElementById('myVideo');
