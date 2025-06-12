@@ -94,8 +94,11 @@ menuToggle.addEventListener('click', () => {
     // Store globally for validation
     window.todayStr = todayStr;
 
-    // Also, initialize current date-time string if needed
+    // Show current date and time
+    const currentDateTimeDiv = document.getElementById('currentDateTime');
+    currentDateTimeDiv.innerText = now.toLocaleString();    
     // (You can define currentDateTimeString here if you want)
+    window.currentDateTimeString = now.toLocaleString();  
   });
 
 // Attach event listener to the form
@@ -160,7 +163,7 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Gender:</strong> ${jeniskelamin}</p>
     <p><strong>Message:</strong> ${pesan}</p>
-    <p><strong>Current Date & Time:</strong><br> ${todayStr}</p>
+    <p><strong>Current Date & Time:</strong><br> ${todayStr} ${currentDateTimeString}</p>
   `;
 
   // Reset the form fields
