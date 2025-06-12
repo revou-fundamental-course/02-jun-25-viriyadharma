@@ -135,13 +135,12 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
 
   // Validate email
   if (!email.includes('@') || !email.includes('.com')) {
-    errorDiv.textContent = 'Please enter a valid email containing "@" and ".com".';
-    resultDiv.innerHTML = '';
+    alert('Please enter a valid email containing "@" and ".com".');
     return;
   }
   
   // Date validation
-  if (!tanggal > window.todayStr) {
+  if (new Date(tanggal) > new Date(window.todayStr)) {
     alert('Tanggal tidak boleh melebihi hari ini.');
     return;
   }
@@ -151,6 +150,10 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
     alert('Silakan pilih Jenis Kelamin.');
     return;
   }
+
+  // Capture current date and time at the moment of submission
+  const now = new Date();
+  const currentDateTimeString = now.toLocaleString();
 
   // Show the "Hasil" heading
   document.getElementById('hasilTitle').style.display = 'block';
@@ -163,7 +166,7 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Gender:</strong> ${jeniskelamin}</p>
     <p><strong>Message:</strong> ${pesan}</p>
-    <p><strong>Current Date & Time:</strong><br> ${todayStr} ${currentDateTimeString}</p>
+    <p><strong>Current Date & Time:</strong><br> ${now.toLocaleString()}</p>
   `;
 
   // Reset the form fields
