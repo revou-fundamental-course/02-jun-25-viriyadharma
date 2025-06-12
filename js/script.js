@@ -160,7 +160,7 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Gender:</strong> ${jeniskelamin}</p>
     <p><strong>Message:</strong> ${pesan}</p>
-    <p><strong>Current Date & Time:</strong><br> ${currentDateTimeString}</p>
+    <p><strong>Current Date & Time:</strong><br> ${todayStr}</p>
   `;
 
   // Reset the form fields
