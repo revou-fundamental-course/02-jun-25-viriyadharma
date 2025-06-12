@@ -96,7 +96,6 @@ menuToggle.addEventListener('click', () => {
 
     // Show current date and time
     const currentDateTimeDiv = document.getElementById('currentDateTime');
-    currentDateTimeDiv.innerText = now.toLocaleString();    
     // (You can define currentDateTimeString here if you want)
     window.currentDateTimeString = now.toLocaleString();  
   });
